@@ -16,18 +16,20 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Light mode styles */
+body {
+  background-color: theme('colors.light.bg');
+  color: theme('colors.light.text');
+}
+
+/* Dark mode styles */
+html.dark body {
+  background-color: theme('colors.dark.bg');
+  color: theme('colors.dark.text');
 }
